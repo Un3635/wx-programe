@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/subject/subject",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffbb4d",
+    "navigationBarTitleText": "电影",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/image/tabBar/home.png",
+        "selectedIconPath": "/image/tabBar/home1.png"
+      },
+      {
+        "pagePath": "pages/subject/subject",
+        "text": "分类",
+        "iconPath": "/image/tabBar/subject.png",
+        "selectedIconPath": "/image/tabBar/subject1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "/image/tabBar/user.png",
+        "selectedIconPath": "/image/tabBar/user1.png"
+      }
+    ]
+  }
+}

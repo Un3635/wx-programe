@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<x-loading wx:if="{{loading}}"></x-loading>
+<view class="container"  style="height: 100%;" >
+  <scroll-view scroll-y  style="height: 100%;"  class="home-wrap" lower-threshold="200px" bindscrolltolower="lower">
+    <view class='item' wx:for="{{list}}" wx:key="*this" bindtap='vodDetail' data-id="{{item.id}}">
+      <image src="{{item.imgUrl}}"></image>
+      <text class="conetent">{{item.title}} / {{item.score}}</text>
+    </view>
+  </scroll-view>
+</view>
+<view>
+</view>

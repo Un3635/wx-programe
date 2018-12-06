@@ -1,0 +1,29 @@
+/* pages/detail/detail.wxss */
+page {
+  /* position: fixed; */
+  /* position: relative;
+  overflow: hidden; */
+}
+.detail-box {
+  padding: 20rpx 20rpx;
+  letter-spacing: 1.5px;
+  padding-bottom: 30px;
+  min-height: 200px;
+  /* overflow: auto; */
+}
+.detail-box > view {
+  margin: 10rpx 0;
+}
+.label {
+  font-size:17px;
+  font-weight:700;
+  margin-right: 10rpx;
+  float:left;
+
+}
+/* .starName {
+  color: orangered
+} */
+.roles {
+  color: #656565;
+}

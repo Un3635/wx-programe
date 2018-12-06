@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<video src="{{vodUrl}}" style="width: 100%"></video>
+<scroll-view class="detail-box" scroll-y>
+  <view>{{detail.name}}</view>
+  <view wx:if="{{detail.director}}"><text class="label">导演:</text> {{detail.director}}</view>
+  <view wx:if="{{detail.type}}"><text class="label">剧情:</text>{{detail.type}}</view>
+  <view wx:if="{{detail.star}}"><text class="label">主演:</text>
+    <view wx:for="{{detail._stars}}" wx:if="{{detail._stars}}" wx:for-item="star" wx:key="{{star.id}}">
+       <text class="starName">{{star.name}}</text><text style="margin: 0 20rpx;">饰</text><text class="roles">{{star.roles}}</text>
+    </view>
+  </view>
+  <view wx:if="{{detail.introduce}}"><text class="label">简介:</text>{{detail._introduce}}</view>
+</scroll-view>
