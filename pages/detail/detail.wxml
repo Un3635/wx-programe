@@ -1,0 +1,94 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-top {{topHeightStr}}">
+  <image src='../../assets/images/zhengongfu.jpg' class='logo'></image>
+  <view class="merchant-introduce">
+    <view class="little-introduce" style="display: {{topHeightStr === '' ? '': 'none'}}">
+      <text class="score">评价 | 4.3 </text>
+      <text class="count">月售 | 400 </text>
+      <text class="send">配送 | 30分钟</text>
+    </view>
+    <view class="detailActive" style="display: {{topHeightStr === '' ? '': 'none'}}">
+      <text class="label">优惠 </text>
+      <text>35减18 56减20 89减24</text>
+    </view>
+    <!-- 优惠活动对比 -->
+    <view class="elememeituan-introduce eleme-introduce" style="display: {{topHeightStr === '' ? 'none': ''}}">
+      <view class="elememeituan-label">饿了么</view>
+      <view class='elememeituan-introduce-content'>
+        <view>
+          <text class='manjian'>满减</text>
+          <text>35减18 56减20 89减24 </text>
+        </view>
+
+        <view>
+          <text class='zhekou'>折扣</text>
+          <text>折扣商品4折起</text>
+        </view>
+        <view>
+          <text class='shoudan'>首单</text>
+          <text>新用户下单立减17元（不与其他活动同享）</text>
+        </view>
+        <view class="notice">公告：亲爱的老朋友们，天气转凉...... </view>
+      </view>
+    </view>
+    <view class="elememeituan-introduce" style="display: {{topHeightStr === '' ? 'none': ''}}">
+      <view class="elememeituan-label">美团</view>
+      <view class='elememeituan-introduce-content'>
+        <view>
+          <text class='shoudan'>首单</text>
+          <text>新用户下单立减17元，首次使用美团支付最高再减3元</text>
+        </view>
+        <view>
+          <text class='manjian'>满减</text>
+          <text>35减18 56减20 89减24 </text>
+        </view>
+        <view>
+          <text class='zhekou'>折扣</text>
+          <text>折扣商品7折起</text>
+        </view>
+        <view class="notice">公告：亲爱的老朋友们，天气转凉...... </view>
+      </view>
+    </view>
+
+    <view class="iconfont icon-arrow {{topHeightStr === '' ? '': 'icon-arrow-down'}}" bindtap="checkintroduce"></view>
+  </view>
+</view>
+
+<!-- 点餐 -->
+<view class="choose-title">
+  <text class="{{headerIdx === 0 ? 'chooseactive': ''}}" bindtap="tabchange" data-id="0">点餐</text>
+  <text class="{{headerIdx === 1 ? 'chooseactive': ''}}" bindtap="tabchange" data-id="1">评价</text>
+  <text class="{{headerIdx === 2 ? 'chooseactive': ''}}" bindtap="tabchange" data-id="2">商家</text>
+</view>
+<!-- <view class="goods-wrap"> -->
+<view class="goods-list" style="display: {{headerIdx === 0 ? '': 'none'}}">
+  <scroll-view class="menu-wrap" scroll-y>
+    <text class="menuTitle {{categoryIdx === index ? 'menuactive' : ''}}" wx:for="{{list}}" wx:for-item="menu" wx:key="*this"  bindtap="menuchange" data-id="{{index}}">{{menu.name}}</text>
+  </scroll-view>
+  <scroll-view class="foods-wrap" scroll-y>
+    <view wx:for="{{foods}}" wx:for-item="good" wx:key="*this" class="food-item">
+      <view class="food-image">
+        <image src='../../assets/images/zhengongfu.jpg'></image>
+      </view>
+      <view class="food-introduce">
+        <view class="foodname">{{good.name}}{{index}}</view>
+        <view class="introduce">内含： 牛胸口油*10，掌中宝*2，吊龙串*2,一对鸡中翅，金针菇*4，香糯鸡皮*2，钢丝小牛肉*10，可乐*2</view>
+        <view class="price">￥22</view>
+      </view>
+      <view class="addbox">+</view>
+    </view>
+
+  </scroll-view>
+</view>
+<!-- </view> -->
+<!-- 饿了么 与 美团 结果对比 -->
+<view class='result' style="display: {{headerIdx === 0 ? '': 'none'}}">
+  <text>饿了么 ￥30 </text>
+  <text>美团 ￥30 </text>
+</view>
+
+<!--评价 -->
+<view class="assets-list" style="display: {{headerIdx === 1 ? '': 'none'}}">评价列表</view>
+
+<!-- 商家介绍 -->
+<view class="merchant-list" style="display: {{headerIdx === 2 ? '': 'none'}}">商家介绍</view>

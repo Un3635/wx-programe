@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/address/address",
+    "pages/detail/detail",
+    "pages/priceContrast/priceContrast"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8d868a",
+    "navigationBarTitleText": "BIPRICE",
+    "navigationBarTextStyle": "#d6c396"
+  }
+}

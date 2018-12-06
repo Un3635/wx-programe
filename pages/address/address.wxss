@@ -1,0 +1,95 @@
+/* pages/address/address.wxss */
+
+page {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.search-wrap {
+  display: flex;
+  padding: 25rpx 0;
+  background: #fff;
+}
+
+.search-label {
+  /* float: left; */
+  flex: 0 0 100rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+
+.search-box {
+  /* float: left; */
+  margin-right: 30rpx;
+  flex: 1;
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+.search-box  > icon {
+  /* width: 30rpx; */
+  float: left;
+  margin-top: 10px;
+  margin-left: 15rpx;
+}
+
+.search-box > input {
+  display: block;
+  width: 70%;
+  /* border: 1px solid #ccc; */
+  height: 80rpx;
+  padding: 0 10rpx 0 10rpx;
+}
+
+/* 历史搜索地址 */
+
+.history-wrap {
+  position: absolute;
+  width: 100%;
+  top: 145rpx;
+  bottom: 0px;
+  left: 0px;
+}
+.history-address {
+  position: relative;
+  width: 100%;
+  min-height: calc(100% - 160rpx);  
+  background-color: #fff;
+  padding-bottom: 160rpx;
+}
+.history-address > .history-box {
+  position: relative;
+  width: 100%;
+}
+.history-address > .history-box > view {
+  width: 90%;
+  color: #ccc;
+  margin: auto;
+  font-size: 36rpx;
+  padding: 20rpx 15rpx 20rpx 15rpx;
+  border-bottom: .5rpx solid #f5f5f5;
+}
+
+.history-address > .history-box > view:last-child {
+  padding-bottom: 20rpx;
+}
+.history-wrap > .history-op {
+  position: relative;
+  width: 100%;
+  clear: both;
+  margin:-160rpx auto 0 auto; 
+  text-align: center;
+}
+.history-wrap > .history-op > view {
+  padding: 20rpx;
+  width: 100%;
+  margin:auto;
+  color: #050500;
+  font-size: 30rpx;
+  border-top: .5rpx solid #f5f5f5;
+}
+
+
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}

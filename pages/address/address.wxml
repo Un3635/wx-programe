@@ -1,0 +1,35 @@
+<!--pages/address/address.wxml-->
+<view class='search-wrap'>
+  <text class="search-label">上海</text>
+  <view class='search-box'>
+    <icon type="search" size="15" />
+    <input type='text' placeholder='搜索'></input>
+  </view>
+</view>
+<view class="history-wrap">
+    <view class='history-address clearfix'>
+        <view class='history-box'>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <!-- <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view>
+          <view>上海市徐汇区云锦路500号</view>
+          <view>上海市徐汇区肇嘉浜路1111号</view> -->
+        </view>
+        
+      </view>
+      <view class='history-op'>
+          <view>查看更多记录</view>
+          <view>清除记录</view>
+        </view>
+</view>

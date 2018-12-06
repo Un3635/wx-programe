@@ -1,0 +1,29 @@
+/* pages/priceContrast/priceContrast.wxss */
+
+.title {
+  display: block;
+  text-align: center;
+  padding: 30rpx;
+}
+
+.canvas-container {
+  width: 99%;
+  margin-top: 60rpx;
+  overflow: auto;
+}
+.canvas-container, .canvas {
+height: calc(100vh - 270rpx);
+}
+
+
+.btn {
+  /* width: 80%; */
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  margin: auto;
+  padding: 20rpx;
+  color: #fff;
+  text-align: center;
+  background: #8d868a;
+}

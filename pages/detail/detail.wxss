@@ -1,0 +1,290 @@
+/* pages/detail/detail.wxss */
+@import '../../assets/fonts/iconfont.wxss';
+
+page {
+  position: fixed;
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100%;
+}
+
+.detail-top {
+  position: absolute;
+  /* background: linear-gradient(top, #f8c28fa4, #9c7b5e);
+  background: -webkit-linear-gradient(top, #f8c28fa4, #9c7b5e); */
+  background: linear-gradient(top, #fafafa, #e8e8e8);
+  background: -webkit-linear-gradient(top, #fafafa, #e8e8e8);
+  width: 85%;
+  padding: 20rpx;
+  /* margin: 0 30rpx; */
+  left: 5%;
+  /* border-top: 1rpx solid #aa9f9f; */
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+  box-shadow: 0 6rpx 8rpx #aaa;
+  /* opacity: .8; *//* filter: blur(5rpx); */
+  z-index: 991;
+}
+
+.detail-top-active {
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  transition: all 3s ease;
+  height: calc(100vh - 50rpx);
+}
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100%;
+  /* text-align: center; */
+  margin: auto;
+  display: block;
+}
+
+.merchant-introduce {
+  width: 80%;
+  padding-bottom: 10rpx;
+  margin: auto;
+}
+
+.little-introduce {
+  margin: 10rpx 0;
+}
+
+.detailActive, .little-introduce {
+  /* width: 70%; */
+  font-size: 28rpx;
+  padding-left: 40rpx;
+  text-align: left;
+  color: #454642;
+}
+
+.label {
+  color: rgb(107, 55, 55);
+  text-align: left;
+}
+
+/* 饿了么 美团详情 */
+
+.elememeituan-introduce {
+  position: relative;
+  padding: 20rpx 0 30rpx 0;
+}
+
+.elememeituan-introduce:before {
+  position: absolute;
+  content: '•';
+  left: -30rpx;
+  top: 6px;
+  color: rgb(67, 75, 77);
+  opacity: 0.4;
+}
+
+.eleme-introduce {
+  border-bottom: 0.5rpx solid #ccc;
+}
+
+.elememeituan-introduce .elememeituan-label {
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+}
+
+.elememeituan-introduce-content text {
+  font-size: 23rpx;
+}
+
+.elememeituan-introduce-content > view > text:first-child {
+  padding: 5rpx;
+  margin-right: 10rpx;
+  color: #fff;
+}
+
+.elememeituan-introduce-content > view > .manjian {
+  background: orange;
+}
+
+.elememeituan-introduce-content > view > .zhekou {
+  background: rgb(17, 27, 85);
+}
+
+.elememeituan-introduce-content > view > .shoudan {
+  background: rgb(99, 121, 39);
+}
+
+.elememeituan-introduce-content .notice {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+
+/* 详情的箭头 */
+
+.icon-arrow {
+  position: absolute;
+  font-size: 30rpx;
+  transform: rotate(90deg);
+  right: 40rpx;
+  top: 130rpx;
+  padding: 10px;
+}
+
+.icon-arrow-down {
+  transform: rotate(-90deg);
+}
+
+/* 点餐 */
+
+.choose-title {
+  position: absolute;
+  
+  top: 260rpx;
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+  /* margin-top: -10rpx; */
+  display: flex;
+  clear: both;
+  border-bottom: 0.5rpx solid #f5f5f5;
+}
+
+.choose-title > text {
+  flex: 1;
+  padding: 17rpx 0 0;
+  text-align: center;
+  font-size: 35rpx;
+}
+
+.choose-title > .chooseactive:after {
+  display: block;
+  content: '';
+  width: 30%;
+  border: 1px solid #b0aaaa;
+  text-align: center;
+  margin: 10rpx auto 0 auto;
+}
+
+.goods-list, .assets-list, .merchant-list {
+  position: absolute;
+  /* margin-top: 90rpx; */
+  top: 340rpx;
+}
+
+.goods-list {
+  display: flex;
+  /* bottom: 120rpx; *//* height: 710rpx; */
+  width: 100%;
+  height: calc(100vh - 450rpx);
+  overflow: hidden;
+}
+
+.menu-wrap {
+  flex: 0 0 200rpx;
+}
+
+.menu-wrap  .menuTitle {
+  display: block;
+  width: 100%;
+  padding: 30rpx 0;
+  font-size: 33rpx;
+  text-align: center;
+  border-bottom: 0.5rpx solid #f5f5f5;
+}
+
+.menu-wrap  .menuactive {
+  background: #fff;
+}
+
+/* 菜品信息 */
+
+.foods-wrap {
+  /* flex: 0 0 550rpx; */
+  width: 550rpx;
+  background: #fff;
+  /* width: 100%; */
+}
+
+.foods-wrap .food-item {
+  position: relative;
+  display: flex;
+  padding: 20rpx;
+}
+
+.food-image {
+  flex: 0 0 140rpx;
+}
+
+.food-image > image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.food-introduce {
+  flex: 1;
+  /* width: 100%; */
+}
+
+/* 菜品名 */
+
+.foodname {
+  margin-bottom: 10rpx;
+  font-size: 35rpx;
+  /* font-weight: 700; */
+}
+
+.introduce {
+  font-size: 32rpx;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 25%;
+}
+
+.price {
+  margin-top: 30rpx;
+  color: #f9b362;
+}
+
+.addbox {
+  position: absolute;
+  top: 145rpx;
+  right: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  background: #f9b362;
+  text-align: center;
+  line-height: 39rpx;
+  color: #fff;
+}
+
+/* 饿了么 与 美团 结果对比 */
+
+.result {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 100rpx;
+  background: #4b4849;
+  display: flex;
+}
+
+.result > text {
+  position: relative;
+  display: block;
+  color: #fff;
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+  /* padding: 20rpx; */
+}
+
+.result > text:first-child:after {
+  display: block;
+  content: '';
+  height: 80rpx;
+  border: 1px solid #b0aaaa;
+  position: absolute;
+  top: 10rpx;
+  right: 0;
+}

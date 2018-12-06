@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="index-wrap {{indexwrapnone}}" >
+    <view class="{{showLocation}} {{displaynone}}">
+      <text class="iconfont icon-local icon-cus" bindtap="setLocation"></text>
+      <text class="icon-text" bindtap="handsetLocation">{{locationStr}}</text>
+      <text class="choose" bindtap="handsetLocation"></text>
+    </view>
+    <input class="search-input" type="text" placeholder="搜索商家、商品的名字" placeholder-style="color:#ddd;" />
+  </view>
+
+  <!-- 推荐商家 -->
+  <scroll-view class='merchant-wrap {{merchantwrapnone}}' bindscrolltolower="lower" bindscroll="scroll" scroll-y  bindscrolltoupper="upper">
+    <view class="merchant-list" wx:for="{{list}}" wx:key="*this" bindtap="toDetail" data-id="{{index}}" bindtouchstart="touchStar"  bindtouchend="touchEnd">
+      <!-- scroll-x style='width: 1500px' -->
+      <!-- 饿了么数据 -->
+      <view class="merchant-item merchant-item-eleme {{hasPriceContrast === index ? 'tranCsss' : ''}}" data-type="eleme">
+        <image class="merchant-image" src='../../assets/images/zhengongfu.jpg'></image>
+        <view class="merchat-item-detail">
+          <text class="title">真功夫 <text style="display: {{hasPriceContrast === index ? '' : 'none'}};font-size: 24rpx;"> 饿了么</text></text>
+          <view class="star-wrap">
+            <view class='star-blur'>
+              <image class="star" src='../../assets/svg/star-blur.svg'></image>
+            </view>
+            <view class='star-focus'>
+              <image class="star" src='../../assets/svg/star-focus.svg'></image>
+            </view>
+          </view>
+          <text class='score'>4.2</text>
+          <view class='time'>30分钟 1.4km</view>
+          <view class='send'>起送 ￥20 配送￥4.3</view>
+          <view class='sale'>
+            <text>35减18</text>
+            <text>56减20</text>
+            <text>89减24</text>
+          </view>
+        </view>
+
+      </view>
+      <!-- 美团数据 -->
+      <view class="merchant-item merchant-item-meituan {{hasPriceContrast === index ? 'tranCsss' : ''}}" data-type="meituan" >
+        <view class="merchat-item-detail">
+          <text class="title">真功夫<text style="display: {{hasPriceContrast === index ? '' : 'none'}};font-size: 24rpx;"> 美团</text></text>
+          <view class="star-wrap">
+            <view class='star-blur'>
+              <image class="star" src='../../assets/svg/star-blur.svg'></image>
+            </view>
+            <view class='star-focus'>
+              <image class="star" src='../../assets/svg/star-focus.svg'></image>
+            </view>
+          </view>
+          <text class='score'>4.2</text>
+          <view class='time'>30分钟 1.4km</view>
+          <view class='send'>起送 ￥20 配送￥4.3</view>
+          <view class='sale'>
+            <text>35减18</text>
+            <text>56减20</text>
+            <text>89减24</text>
+          </view>
+        </view>
+      </view>
+      <view class="priceContrast iconfont icon-discount" catchtap='priceContrast' data-hasPriceContrast="{{index}}"></view>
+    </view>
+  </scroll-view>
+</view>

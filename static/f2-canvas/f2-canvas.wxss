@@ -1,0 +1,5 @@
+/* component/f2-canvas/f2-canvas.wxss */
+.f2-canvas {
+  width: 100%;
+  height: 100%;
+}

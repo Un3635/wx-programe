@@ -1,0 +1,8 @@
+
+<text class="title">商家菜品比价</text>
+<scroll-view class='canvas-container' scroll-x bindscroll="scroll">
+  <view style='translateX:-{{scrollLeft}}px'>
+    <canvas canvas-id="canvas" class="canvas {{trancss}}" style="width: {{dataLength * (windowWidth / 5.5)}}px"bindtap="checkCanvas" disable-scroll="true"></canvas>
+  </view>
+</scroll-view>
+<view class="btn" bindtap='toDetai'>点餐</view>

@@ -1,0 +1,254 @@
+/**index.wxss**/
+@import '../../assets/fonts/iconfont.wxss';
+
+page {
+  background-color: #f4f4f4;
+}
+
+.container {
+  height: 100vh;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.index-wrap {
+  position: fixed;
+  width: 100%;
+  background: -webkit-linear-gradient(top, #8d868a, #aa9fa0);
+  z-index: 999;
+}
+
+.index-wrap-none {
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  background: #8d868a;
+  top: -60rpx;
+}
+
+.none {
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  /* display: none; */
+  opacity: 0;
+  /* transition: all 1s linear; */
+}
+
+.displaynone {
+  display: none;
+}
+
+.icon-cus {
+  color: #fff;
+  padding: 10rpx;
+  /* margin-left: 5rpx; */
+}
+
+.icon-text {
+  /* margin: 0 1.333333vw; */
+  font-size: 38rpx;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.choose {
+  display: inline-block;
+  /* margin-top: 400rpx; */
+  width: 0px;
+  height: 0px;
+  margin-left: 10rpx;
+  margin-top: 5px;
+  border-top: 18rpx solid #fff;
+  border-right: 18rpx solid transparent;
+  border-bottom: 18rpx solid transparent;
+  border-left: 18rpx solid transparent;
+  vertical-align: middle;
+}
+
+.search-text {
+  display: block;
+}
+
+.search-input {
+  background: #fff;
+  display: block;
+  width: 80%;
+  height: 70rpx;
+  padding-left: 30px;
+  border: 1px solid #fff;
+  text-align: center;
+  margin: 20rpx auto;
+  border-radius: 4px;
+}
+
+/* 商家列表 */
+
+.merchant-wrap {
+  position: relative;
+  margin-top: 175rpx;
+  height: calc(100vh - 175rpx);
+  /* transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear; */
+}
+
+.merchant-wrap-none {
+  margin-top: 115rpx;
+  height: calc(100vh - 115rpx);
+}
+
+.merchant-list {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  width: 1600rpx;
+  clear: both;
+  overflow: hidden;
+  margin: 10rpx;
+  /* border: 1px solid red;
+  box-shadow: 0px 2px 2px #eee; */
+  border-radius: 10rpx;
+}
+
+.merchant-list:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+.merchant-item-eleme {
+  /* border: 1px solid blue; *//* transform: translateX(-600rpx); */
+}
+
+.merchant-item-meituan {
+  /* border: 1px solid red; *//* transform: translateX(-600rpx); */
+}
+
+.merchant-item {
+  width: 700rpx;
+  display: flex;
+  float: left;
+  padding: 30rpx 0 20rpx 30rpx;
+  transition: all 0.3s linear;
+}
+
+.merchant-item > .merchant-image {
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #dbdbdb;
+  border-radius: 4rpx;
+  margin-right: 20rpx;
+}
+
+.merchant-item > .merchat-item-detail {
+  position: relative;
+  flex: 1;
+  width: 100%;
+}
+
+/* 商家右侧信息 */
+
+.merchat-item-detail .title {
+  display: block;
+  width: 300rpx;
+  height: 60rpx;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.star-wrap {
+  position: relative;
+}
+
+.star-focus, .star-blur {
+  position: absolute;
+  height: 30rpx;
+  overflow: hidden;
+}
+
+.star-focus {
+  width: 120rpx;
+}
+
+.star {
+  display: block;
+  margin-top: 5rpx;
+  width: 140rpx;
+  height: 25rpx;
+  /* background-color: #000; */
+  color: #dbdbdb;
+  /* float: left; */
+}
+
+.score, .time, .send, .sale {
+  color: #676564;
+  font-size: 30rpx;
+}
+
+.time, .send, .sale {
+  margin-bottom: 20rpx;
+}
+
+.score {
+  /* float: left; *//* width: 130%; *//* float: right; */
+  display: inline-block;
+  margin-left: 150rpx;
+  margin-top: -20rpx;
+  /* text-align: center; */
+  vertical-align: middle;
+}
+
+.sale > text {
+  border: 1px solid #e68524;
+  margin-left: 5rpx;
+  color: #e68524;
+}
+
+/* 比价 */
+
+.priceContrast {
+  position: absolute;
+  z-index: 99;
+  font-size: 32rpx;
+  padding: 8rpx 10px;
+  left: 670rpx;
+  top: 10rpx;
+  color: rgb(212, 155, 49);
+  /* border: 1px solid #f4d6a8; *//* background: rgb(212, 155, 49); */
+  border-radius: 8rpx;
+  letter-spacing: 1.2rpx;
+}
+
+/* tranCsss */
+
+.tranCsss {
+  transform: translateX(-240rpx);
+  width: 550rpx;
+}
+
+.tranCsssMeituan {
+  /* transform: translateX(-340rpx); */
+  transform: translateX(-240rpx);
+  width: 350rpx;
+}
